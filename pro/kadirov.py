@@ -99,7 +99,7 @@ class Kadirov:
         self._set_input_by_id('f_name', self.firstname)
         self._set_input_by_id('l_name', self.lastname)
         self._set_input_by_id('email_addr', self.emailid)
-        self._click_button_by_XPATH('//*[@id="btn_save"]').click()
+        
         time.sleep(7)
         print('success')
 
@@ -177,12 +177,7 @@ class Kadirov:
     def save_info(self):
 	    
 			
-        print("======================")
-        print("https://www.lynda.com/portal/sip?org=detroitpubliclibrary.org")
-        print("cardnumber ==> {}".format(self.testt))
-        print("PIN number ==> {}".format(self.PIN))
-        print("emailID ==> {}".format(self.emailid))
-        print("=========================")
+
         print("all info are saved!")
 
         with open("accountinfo.txt", 'a') as txtFile:
@@ -191,8 +186,10 @@ class Kadirov:
             txtFile.writelines("Lastname ==> {}\n".format(self.lastname))
             txtFile.writelines("https://www.lynda.com/portal/sip?org=detroitpubliclibrary.org")
             txtFile.writelines("\n")
-            txtFile.writelines("cardnumber ==> {}".format(self.testt))                                                                            #self.lastname[0].lower()))
+            txtFile.writelines("cardnumber ==> {}".format(self.testt))
+            txtFile.writelines("\n")
             txtFile.writelines("PIN number ==> {}\n".format(self.PIN))
+            txtFile.writelines("\n")
             txtFile.writelines("emailID ==> {}\n".format(self.emailid))
             txtFile.writelines("===================================================\n")
 
