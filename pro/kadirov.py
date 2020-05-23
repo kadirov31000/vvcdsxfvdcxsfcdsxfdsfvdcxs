@@ -190,6 +190,7 @@ class Kadirov:
             txtFile.writelines("Firstname ==> {}\n".format(self.firstname))
             txtFile.writelines("Lastname ==> {}\n".format(self.lastname))
             txtFile.writelines("https://www.lynda.com/portal/sip?org=detroitpubliclibrary.org")
+            txtFile.writelines("\n")
             txtFile.writelines("cardnumber ==> {}".format(self.testt))                                                                            #self.lastname[0].lower()))
             txtFile.writelines("PIN number ==> {}\n".format(self.PIN))
             txtFile.writelines("emailID ==> {}\n".format(self.emailid))
