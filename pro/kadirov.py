@@ -76,7 +76,7 @@ class Kadirov:
         self.control_Ib = random.choice(movie_list)
         self.set_select("registrationDropDown", self.control_Ib)
         WebDriverWait(self.driver, 30)
-		self._click_button_by_XPATH('//*[@id="registrationSubmit"]')
+	self._click_button_by_XPATH('//*[@id="registrationSubmit"]')
         time.sleep(5)
         self.cardnumber = WebDriverWait(self.driver, 30).until(
             EC.presence_of_element_located(
@@ -189,7 +189,7 @@ class Kadirov:
             txtFile.writelines("===================================================\n")
             txtFile.writelines("Firstname ==> {}\n".format(self.firstname))
             txtFile.writelines("Lastname ==> {}\n".format(self.lastname))
-			txtFile.writelines("https://www.lynda.com/portal/sip?org=detroitpubliclibrary.org")
+	    txtFile.writelines("https://www.lynda.com/portal/sip?org=detroitpubliclibrary.org")
             txtFile.writelines("cardnumber ==> {}".format(self.testt))                                                                            #self.lastname[0].lower()))
             txtFile.writelines("PIN number ==> {}\n".format(self.PIN))
             txtFile.writelines("emailID ==> {}\n".format(self.emailid))
