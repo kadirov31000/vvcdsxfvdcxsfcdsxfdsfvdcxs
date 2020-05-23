@@ -6,7 +6,7 @@ import pro.kadirov
 
 print("|=================================|")
 print("|                                 |")
-print("|                                 |")
+print("|              generator          |")
 print("|                                 |")
 print("|        lynda free account       |")
 print("|                                 |")
