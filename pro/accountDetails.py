@@ -51,13 +51,13 @@ class AccountDetail:
         switch_to(self.driver, 'bestrandoms')
         self._street = WebDriverWait(self.driver, 30).until(
             EC.presence_of_element_located(
-                (By.XPATH, '/html/body/section[2]/div/div[2]/ul/li[1]/span[2]'))).text
+                (By.XPATH, '/html/body/section[2]/div/div[2]/div[3]/ul/li[1]/span[2]'))).text
         self._city = WebDriverWait(self.driver, 30).until(
             EC.presence_of_element_located(
-                (By.XPATH, '/html/body/section[2]/div/div[2]/ul/li[1]/span[3]'))).text
+                (By.XPATH, '/html/body/section[2]/div/div[2]/div[3]/ul/li[1]/span[3]'))).text
         self._zip = WebDriverWait(self.driver, 30).until(
             EC.presence_of_element_located(
-                (By.XPATH, '/html/body/section[2]/div/div[2]/ul/li[1]/span[5]'))).text		
+                (By.XPATH, '/html/body/section[2]/div/div[2]/div[3]/ul/li[1]/span[5]'))).text		
 
       
 
