@@ -49,13 +49,13 @@ class AccountDetail:
         baseURL = 'https://www.bestrandoms.com/random-detroit-address'
         new_tab(self.driver, baseURL)
         switch_to(self.driver, 'bestrandoms')
-        self._street = WebDriverWait(self.driver, 30).until(
+        self._street = WebDriverWait(self.driver, 90).until(
             EC.presence_of_element_located(
                 (By.XPATH, '/html/body/section[2]/div/div[2]/div[3]/ul/li[1]/span[2]'))).text
-        self._city = WebDriverWait(self.driver, 30).until(
+        self._city = WebDriverWait(self.driver, 90).until(
             EC.presence_of_element_located(
                 (By.XPATH, '/html/body/section[2]/div/div[2]/div[3]/ul/li[1]/span[3]'))).text
-        self._zip = WebDriverWait(self.driver, 30).until(
+        self._zip = WebDriverWait(self.driver, 90).until(
             EC.presence_of_element_located(
                 (By.XPATH, '/html/body/section[2]/div/div[2]/div[3]/ul/li[1]/span[5]'))).text		
 
@@ -70,7 +70,7 @@ class AccountDetail:
         new_tab(self.driver, baseURL)
         switch_to(self.driver, 'fakephonenumber')
 
-        self._phone_num = WebDriverWait(self.driver, 30).until(
+        self._phone_num = WebDriverWait(self.driver, 90).until(
             EC.presence_of_element_located(
                 (By.XPATH, '/html/body/div[1]/div/div[2]/div[3]/div/ul[1]/li[1]/p[1]/a'))).text
         
@@ -90,14 +90,14 @@ class AccountDetail:
         return info
 
     def _click_button_by_ID(self, button_ID):
-        WebDriverWait(self.driver, 30).until(
+        WebDriverWait(self.driver, 90).until(
             EC.presence_of_element_located((By.ID, button_ID))).click()
 			
 	
   		
 
     def set_select(self, select_ID, value):
-        box = WebDriverWait(self.driver, 30).until(
+        box = WebDriverWait(self.driver, 90).until(
             EC.presence_of_element_located((By.ID, select_ID)))
 
         option = Select(box)
