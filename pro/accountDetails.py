@@ -48,7 +48,7 @@ class AccountDetail:
         print("Generating adress......")
         baseURL = 'https://fakeaddressgenerator.com/World_Address/get_us_address/city/Detroit'
         new_tab(self.driver, baseURL)
-        switch_to(self.driver, 'gen address')
+        switch_to(self.driver, 'fakephoneadress')
         self._street = WebDriverWait(self.driver, 90).until(
             EC.presence_of_element_located(
                 (By.XPATH, '/html/body/div[1]/div[3]/div[1]/div/div[3]/div[2]/div[3]/div[2]/strong/input'))).text
