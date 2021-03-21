@@ -54,33 +54,33 @@ class Kadirov:
         self.driver.get(self.baseURL)
         WebDriverWait(self.driver, 30)
         self._set_input_by_id('registrationTextField', self.firstname)
-        self._set_input_by_id('registrationTextField_1', self.lastname)
+        self._set_input_by_id('registrationTextField_0', self.lastname)
         self.emailid = self.firstname+ self.lastname+ "@grr.la"
-        self._set_input_by_id('registrationTextField_3', self.brth)
+        #self._set_input_by_id('registrationTextField_3', self.brth)
         WebDriverWait(self.driver, 30)
-        self._set_input_by_id('confirmField1', self.emailid)
-        self._set_input_by_id('confirmField2', self.emailid)
+        #self._set_input_by_id('registrationTextField_1', self.emailid)
+        #self._set_input_by_id('confirmField2', self.emailid)
         self.Province = "Michigan"
-        self._set_input_by_id('registrationTextField_6', self.Province)
-        self._set_input_by_id('registrationTextField_8', self.phone_num)
+        self._set_input_by_id('registrationTextField_3', self.Province)
+        #self._set_input_by_id('registrationTextField_8', self.phone_num)
         time.sleep(2)
-        self._set_input_by_id('registrationTextField_4', self.street_address)
-        self._set_input_by_id('registrationTextField_5', self.city)
-        self._set_input_by_id('registrationTextField_7', self.zipcode)
+        self._set_input_by_id('registrationTextField_1', self.street_address)
+        self._set_input_by_id('registrationTextField_2', self.city)
+        self._set_input_by_id('registrationTextField_4', self.zipcode)
         time.sleep(1)
         self.PIN = random_four_digit_PIN()
         WebDriverWait(self.driver, 30)
-        self._set_input_by_id('pwdField1', self.PIN)
-        self._set_input_by_id('pwdField2', self.PIN)
+        #self._set_input_by_id('pwdField1', self.PIN)
+        #self._set_input_by_id('pwdField2', self.PIN)
         movie_list = ['BRBO', 'BRCB', 'BRCH', 'BRDG', 'BRJE', 'MAIN', 'BRSF', 'BRSK', 'BRCo', ]
         self.control_Ib = random.choice(movie_list)
         self.set_select("registrationDropDown", self.control_Ib)
         WebDriverWait(self.driver, 30)
         self._click_button_by_XPATH('//*[@id="registrationSubmit"]')
         time.sleep(5)
-        self.cardnumber = WebDriverWait(self.driver, 30).until(
-            EC.presence_of_element_located(
-                (By.XPATH, '//*[@id="content"]/div[1]/p[2]'))).text
+        #self.cardnumber = WebDriverWait(self.driver, 30).until(
+            #EC.presence_of_element_located(
+                #(By.XPATH, '//*[@id="content"]/div[1]/p[2]'))).text
         self.txtx = str(self.cardnumber)
         self.testt = self.txtx[38:45]
         print(self.testt)
