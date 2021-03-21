@@ -46,18 +46,16 @@ class AccountDetail:
         self._lastname = name.split()[1]	
     def _adress(self):
         print("Generating adress......")
-        baseURL = 'https://www.bestrandoms.com/random-detroit-address'
+        baseURL = 'https://fakeaddressgenerator.com/World_Address/get_us_address/city/Detroit'
         new_tab(self.driver, baseURL)
-        switch_to(self.driver, 'bestrandoms')
+        switch_to(self.driver, 'gen address')
         self._street = WebDriverWait(self.driver, 90).until(
             EC.presence_of_element_located(
-                (By.XPATH, '/html/body/section[2]/div/div[2]/div[3]/ul/li[1]/span[2]'))).text
-        self._city = WebDriverWait(self.driver, 90).until(
-            EC.presence_of_element_located(
-                (By.XPATH, '/html/body/section[2]/div/div[2]/div[3]/ul/li[1]/span[3]'))).text
+                (By.XPATH, '/html/body/div[1]/div[3]/div[1]/div/div[3]/div[2]/div[3]/div[2]/strong/input'))).text
+        self._city = 'Detroit'
         self._zip = WebDriverWait(self.driver, 90).until(
             EC.presence_of_element_located(
-                (By.XPATH, '/html/body/section[2]/div/div[2]/div[3]/ul/li[1]/span[5]'))).text		
+                (By.XPATH, '/html/body/div[1]/div[3]/div[1]/div/div[3]/div[2]/div[7]/div[2]/strong/input'))).text		
 
       
 
